@@ -79,5 +79,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: docker.pkg.github.com/mhous/github-actions-for-packages/tic-tac-toe:${{ env.TRIMMED_SHA }}
+        tags: mhous/github-actions-for-packages/tic-tac-toe:${{ env.TRIMMED_SHA }}
     
