@@ -72,10 +72,13 @@ jobs:
       uses: benjlevesque/short-sha@v1.2
       with:
         length: 7
+    - run: echo $SHA
+      env: 
+        SHA: ${{ steps.short-sha.outputs.sha }}
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
         context: .
         push: true
-        tags: docker.pkg.github.com/mhous/github-actions-for-packages/tic-tac-toe:sha-${{ steps.short-sha.outputs.sha }}
+        tags: docker.pkg.github.com/mhous/github-actions-for-packages/tic-tac-toe:sha-${{ env.SHA }}
     
