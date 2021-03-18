@@ -73,6 +73,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: tic-tac-toe:${{github.sha}}
+        tags: mhous/github-actions-for-packages/tic-tac-toe:test123
         github-token: ${{secrets.GITHUB_TOKEN}}
     
