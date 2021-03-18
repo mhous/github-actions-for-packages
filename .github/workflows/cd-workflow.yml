@@ -73,4 +73,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: docker.pkg.github.com/mhous/github-actions-for-packages/tic-tac-toe:${{github.sha}}
+        tags: mhous/github-actions-for-packages/tic-tac-toe:${{github.sha}}
+    
