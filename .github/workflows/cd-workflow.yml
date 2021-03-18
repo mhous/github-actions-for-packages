@@ -1,9 +1,6 @@
 name: Docker CD
 
-on:
-  push:
-    paths:
-    - "**Dockerfile**"
+on: [push]
 
 jobs:
   build:
@@ -73,6 +70,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: mhous/github-actions-for-packages/tic-tac-toe:test123
+        tags: tic-tac-toe:test123
         github-token: ${{secrets.GITHUB_TOKEN}}
     
